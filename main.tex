@@ -1,0 +1,118 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+\title{SM358 Notes 2016}
+\author{Nigel Sharp}
+\date{June 2016}
+
+\begin{document}
+
+\maketitle
+
+\section{Book 1 Chapter 1: The Quantum Revolution}
+\subsection*{Introduction}
+\subsection{The quantization of energy}
+Many systems emit light with characteristic patterns of spectral lines.\\
+\subsubsection{Energy Levels}
+Related to quantized \textbf{energy levels} of those systems.\\
+Unique spectral signature for each element.\\
+Niels Bohr 1922 gave semi-quantum explanation (with energy levels) for the spectrum of atomic Hydrogen.\\
+Contrast with a cooling red-hot poker, whose temperature appears to fall continuously.\\
+Atom jumps to lower energy level, emitting \textbf{photon} (repeat until ground state).\\
+Frequency of photons described in \textbf{angular frequency} $\omega = 2\pi f$.\\
+$$ E = h f $$
+$$ E = \hbar \omega $$
+\begin{tabular}{|c|c|c|}
+\hline
+Molecule rotational energies & Electronic energs. of atom & Nuclear energs. \\
+\hline
+$\sim$ 1 meV & $\sim$ 1 eV & $\sim$ 1 MeV \\
+\hline
+\end{tabular}\\
+We will see how energy levels of atoms may be calculated using quantum mechanics.\\
+Above a certain energy, an electron is ejected and the atom becomes \textbf{ionized}. The system of an ionized hydrogen atom and its ejected electron can them be at \emph{any} energy (a continuum of energy levels) above the ionization energy.
+\subsubsection{Democritus had true insight!}
+(stuff about indestructibility of atoms)
+
+\subsection{A farewell to determinism}
+Probabilities - for example radioactive decay, and quantum random number generators.\\
+\subsubsection{The exponential law of radioactive decay}
+Exponential law of \textbf{radioactive decay} - Ernest Rutherford 1900.\\
+Atomic nuclei of a specific kind in their \textbf{ground state} are absolutely identical. There is no hidden property telling the nucleus when to decay. But strangely, these identical nuclei don't decay at identical times.\\
+The \textbf{decay constant} $\lambda$ gives the probability $\lambda \delta t$ of decay in a small period of time $\delta t$. \\
+\subsubsection{An application of quantum indeterminism}
+\textbf{Quantum random number generators} using \textbf{half-silvered mirrors}.
+
+\subsection{Light as waves - light as particles}
+Photons and electrons behave in some ways like waves, but also particles.\\
+Thomas Young (1773-1829) had demonstrated wave nature of light by \textbf{diffraction}.\\
+Maxwell showed (1860s) that transverse EM waves at speed of light are a consequence of electromagnetic theory.\\
+Existence of EM waves shown by Hertz in 1887.\\
+Einstein proposed packets of EM radiation (photons) in 1905, with \textbf{wave-particle duality}.\\
+Wave described by $u(x,t) = A \cos (kx-\omega t)$, where \textbf{wave number} $k=2\pi/\lambda$ and $\omega = 2 \pi f$ . \\
+\subsubsection{Light behaving as waves}
+Diffraction pattern as light goes through a single slit.\\
+\textbf{Two-slit interference pattern} demonstrates wave nature of light - Young.
+\subsubsection{Light behaving as particles}
+EM theory says waves should radiate in all directions, but Einstein perplexed why they appeared to radiate in particular directions, like particles. \\
+\subsubsection{Light behaving like waves \emph{and} particles}
+G.I Taylor studied very low intensity diffraction patterns. Over short time, only a few specks appeared, but over longer periods the dots formed a diffraction pattern.
+
+\subsection{Electrons as particles - electrons as waves}
+De Broglie's relationship and wave functions for electrons.\\
+\subsubsection{The de Broglie relationship}
+The diffraction pattern is dependant on the wave's wavelength. The \textbf{de Broglie relationship} gives us this \textbf{de Broglie wavelength} for particles of momentum $p$:\\
+$$\lambda_{dB} = h / p$$
+Useful for getting a small amount of diffraction in a tunnelling electron microscope - for high resolution give them high momentum to give a smaller wavelength than light.\\
+\subsubsection{Diffraction and the uncertainty principle}
+Discussion about precisely knowing position of electron at split, causing greater uncertainty in momentum and thus the spread out diffraction pattern.
+\subsubsection{Electrons behaving like waves \emph{and} particles}
+(experiment as per G.I Taylor's for photons, see above)
+\subsubsection{Describing electron waves: the wave function}
+The \textbf{wave function} is a complex function of time and position, for example $\Psi(\mathbf{r},t)$ . \\
+Schrodinger's equation tells us the time-evolution of the wave function $\Psi$ . \\
+\textbf{Born's rule} tells us the probability of finding the particle in a small volume at a particular time:\\
+probability = $ | \Psi(\mathbf{r},t)|^2 \delta V $ . \\
+Review of some complex number stuff for a function $ f(x) = u(x) + i v(x) $ : \\
+\begin{itemize}
+    \item \textbf{Complex congugate}: $ f^*(x) = u(x) - iv(x) $
+    \item Useful for getting modulus squared: $ |f|^2 = f^*f = u^2+v^2 $
+    \item Any complex number can be expressed in terms of modulus $|f|$ and phase $\phi$ : $f = |f|e^{i\phi}$
+    \item Since $ e^{i\phi} = \cos(\phi) + i\sin(\phi) $
+    \item Consequently the conjugate of $ f=|f|e^{i\phi} $ is $ f^*=|f|e^{-i\phi} $
+    \item And we get $ f^*f = |f|e^{-i\phi} |f|e^{i\phi} = |f|^2 $
+\end{itemize}
+\subsubsection{Particles and the collapse of the wave function}
+A \textbf{particle} is an entity which is found in only one place when its position is measured.\\
+When tbe electron wave arrives at the screen, it causes a permanent change in \emph{one} of the pixels, chosen pretty much at random according to the wave function. It is as if that change instantaneously tells all other pixels not to respond. This is referred to as the \textbf{collapse of the wave function}. What happens at one place affects what happens at others in a way that cannot be explained by communication at the speed of light, an example of \textbf{quantum non-locality}.\\
+\subsubsection{The de Broglie wave function}
+This section explains how we can "guess" a wave function for a free particle.\\
+This is the \textbf{de Broglie wave function}:
+$$ \Psi_{dB}(x,t) = |A|e^{i(kx-\omega t + \phi)} $$
+This is for a free particle of momentum $\hbar k$ and kinetic energy $\hbar \omega$ . \\
+The phase arises from expressing the complex constant $A$ as $A = |A|e^{i\phi}$ . \\
+A bit useless as this gives us a particle equally probable to be find anywhere... but we will see useful combinations of de Broglie wave functions.
+
+\subsection{The origin of quantum interference}
+Introducing the \textbf{probability amplitude}
+\subsubsection{Electron interference caused by a double slit}
+For water waves: \textbf{Constructive interference} and \textbf{destructive interference} due to summing of waves.\\
+For quantum wave functions, they sum \emph{before} Born's rule give us the probabilities.
+$$\mathrm{prob}=  \lvert \Psi \rvert ^2\delta V= \lvert \Psi_1+\Psi_2 \rvert ^2\delta V$$
+so
+$$\mathrm{prob}=(\Psi_1+\Psi_2)^*(\Psi_1+\Psi_2)\delta V$$
+which comes out as
+$$ \mathrm{prob} = (\lvert\Psi_1\rvert^2 + \lvert\Psi_2\rvert^2 + \Psi_1^* \Psi_2 + \Psi_2^* \Psi_1) \delta V $$
+with $ \Psi_1^*\Psi_2 + \Psi_2^*\Psi_1 $ being the \textbf{interference term}, which can be positive or negative.\\
+\subsubsection{Probability amplitudes}
+Schrodinger's equation applies to non-relativistic material particles like electrons, but \emph{not} photons.
+But we \emph{can} treat photons in a similar way, with interference, using \textbf{probability amplitudes}, thanks to the informally named \textbf{interference rule}:\\
+If a given process, leading from an initial state to a final state, can proceed in two or more alternative ways, and no information is available about which way is followed, the probability amplitude for the process is the sum of the probability amplitudes for the different ways. Only after adding do we take the square of the modulus to obtain the probability of the process.
+\subsubsection{Photon interference in the laboratory}
+(about a \textbf{Mach-Zehnder interferometer}, photons take two paths to two detectors via two half-silvered mirrors, and for certain (adjustable) path length differences, photons are only detected at one or other detector)
+
+\subsection{Quantum physics: its scope and its mystery}
+(no notes necessary)
+
+\end{document}
