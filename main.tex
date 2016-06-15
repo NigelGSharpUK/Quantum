@@ -253,9 +253,23 @@ $$ i \hbar\frac{\partial\Psi(x,t)}{\partial t} = - \frac{\hbar^2}{2m} \frac{\par
 Which is Schrodinger's equation for a particle of mass m moving in 1 dimension, in a given potential $V(x)$.
 
 \subsection{Wave functions and their interpretation}
+Because of the $i$ in Schrodinger's equation, and because observables are real, a purely real wave equation $\Psi$ cannot satisfy Schrodinger's equation.
+
 \subsubsection{Born's rule and normalization}
+Solutions to Schrodinger's equation are rarely automatically normalized, so we have to normalize them according to Born's rule.\\
+However, once normalized at a time $t_0$, they evolve according to Schrodinger's equation and \emph{stay normalized} until any other time $t_1$.
+
 \subsubsection{Wave functions and states}
+This section talks about the interpretation of the wave function.\\
+The wave function describing a particular state of a system is the \emph{most complete description} it is possible to have of that state.\\
+Schrodinger's equation \emph{does not} describe the collapse of the wave function which occurs on measurement.\\
+The wave function describing a state is not unique - for any real $\alpha$, multiplying $\Psi$ by a \textbf{phase factor} $e^{i\alpha}$ will be an equally valid description of the same state.\\
+But where $\Psi$ consists of a sum, the relative phases between 
+the terms \emph{is important}.\\
+
 \subsubsection{The superposition principle}
+If $\Psi_1, \Psi2$ are solutions of Schrodinger's equation, then so is $a\Psi_1 + b\Psi_2$, for any complex $a,b$.
+
 \subsection{The time-independent Schrodinger equation}
 \subsubsection{The separation of variables}
 \subsubsection{An eigenvalue equation for energy}
