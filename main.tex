@@ -222,6 +222,36 @@ $$ i\hbar \frac{\partial\Psi(x,t)}
 This is \textbf{Schrodinger's equation} for a particle of mass $m$ moving in one dimension, with a potential energy function $V(x)$.
 
 \subsubsection{A systematic recipe for Schrodinger's equation}
+We now give a systematic way of producing Schrodinger's equation for \emph{any} system having a well-defined classical description.\\ \\
+
+\textbf{Step 1} Specify the Hamiltonian function\\
+In Newtonian physics, $F=ma$.\\
+But we need to write about our sytem in terms of momentum and potential energy.\\
+Firstly force is related to potential energy:
+$$ F_x = -\partial V/\partial x $$
+Secondly $ma$ is related to momentum:
+$$ ma = dp_x/dt $$
+The \textbf{Hamiltonian function} is the total energy of the system, but with kinetic energies expressed in terms of particles' momenta.\\
+For a particle moving along the $x$ axis:
+$$ H = \frac{p_x^2}{2m} + V(x). $$
+
+\textbf{Step 2} From function to operator\\
+Now we replace the Hamiltonian function by the corresponding \textbf{Hamiltonian operator}.\\
+This is typically done by replacing momentum terms like $p_x$ by their corresponding momentum operator $-i\hbar\partial/\partial x$.\\
+From this it follows that the kinetic energy operator (for the above term $p_x^2/2m$) is:
+$$ \frac{\hat{p}_x^2}{2m} = \frac{1}{2m} \left( -i\hbar \frac{\partial}{\partial x}\right)^2
+   = -\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2}. $$
+(Also, remember that the operator for potential energy $V(x)$ is just an additional term that multiplies by the function $V(x)$)\\
+For our particle on the x axis we have:
+$$ \hat{H} = \frac{\hat{p}_x^2}{2m} + \hat{V}(x) = -\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} + V(x). $$
+
+\textbf{Step 3} Assembling Schrodinger's equation\\
+Finally we plug $\hat{H}$ into Schrodinger's equation, \emph{which always takes the same general form:}
+$$ i \hbar\frac{\partial\Psi(x,t)}{\partial t} = \hat{H}\Psi(x,t) $$
+In our example, this gives:
+$$ i \hbar\frac{\partial\Psi(x,t)}{\partial t} = - \frac{\hbar^2}{2m} \frac{\partial^2 \Psi(x,t)}{\partial x^2} + V(x)\Psi(x,t). $$
+Which is Schrodinger's equation for a particle of mass m moving in 1 dimension, in a given potential $V(x)$.
+
 \subsection{Wave functions and their interpretation}
 \subsubsection{Born's rule and normalization}
 \subsubsection{Wave functions and states}
