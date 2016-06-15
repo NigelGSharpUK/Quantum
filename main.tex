@@ -115,4 +115,122 @@ If a given process, leading from an initial state to a final state, can proceed 
 \subsection{Quantum physics: its scope and its mystery}
 (no notes necessary)
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% BOOK 1 CHAPTER 2  %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Book 1 Chapter 2: Schrodinger's equation and wave functions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Introduction}
+What equation do de Broglie's "electron waves" obey?\\
+1926 Erwin Schrodinger presented his wave equation.\\
+Wave function changes with time, and so does the region where we are likely to find the electron ("the electron moves").\\
+In general physics, a (partial differential) wave equation links rate of change in time to rate of change in space.\\
+We also want to explain the energy levels in systems.\\
+Turns out these are explained by the \textbf{stationary states} (standing waves) of Schrodinger's equation.\\
+This leads to a simpler condition, the \textbf{time-independent Schrodinger equation}, describing the spatial variation of the standing wave. Solve this to get energy levels.\\
+
+\subsection{Schrodinger's equation for free particles}
+Free partical described by de Broglie wave function
+$$ \Psi_{dB}(x,t) = A e^{i(kx-\omega t)} $$
+where A is a complex constant.\\
+Corresponds to particle with momentum
+$$ p = h/\lambda = \hbar k $$
+and energy
+$$ E = hf = \hbar \omega $$
+Let's guess/cheat a partial differential equation and check that $\Psi_{dB}$ satisfies it:
+$$ i \hbar \frac{\partial \Psi_{dB}}
+                {\partial t}         = -\frac{\hbar^2}
+                                             {2m}       \frac{\partial^2\Psi_{dB}}
+                                                             {\partial x^2} $$
+(This is actually Schrodinger's equation for a free particle with zero potential energy).\\
+Differentiating and plugging one into the other we find
+$$ \hbar\omega =(\hbar k)^2/2m $$
+This is significant. Use the deBroglie relationship for momentum $p=\hbar k$, and newtonian $p=mv$, and we get
+$$ \frac{(\hbar k)^2}
+        {2m}          = \frac{p^2}
+                             {2m}   = \frac{(mv)^2}
+                                           {2m}     = mv^2/2 $$
+For a free particle (no forces), we can take potential energy to be zero, and the above shows energy $E=\hbar\omega$.
+
+\subsection{Mathematical preliminaries}
+Generalizing the above wave equation involves some leaps of faith...
+
+\subsubsection{Operators}
+An \textbf{operator} is a mathematical entity which transforms one function into another function.
+For example, the derivative operator $d/dx$.\\
+Another example, multiplying by a constant.\\
+A third example, multiplying by another function.\\
+When an operator is represented by a symbol such as $O$, the symbol wears a hat: $\hat{O}$\\
+
+\subsubsection{Linear operators}
+Usual definition of linearity holds.\\
+Not all operators are linear, but the vast majority of what we will meet are.\\
+
+\subsubsection{Eigenvalue equations}
+Suppose we have an operator $\hat{A}$.\\
+Suppose it set loose on some functions $f(x), g(x), h(x)$. \\
+If the following holds, the function is an eigenfunction of $\hat{A}$:
+$$ \hat{A}f_1(x) = \lambda_1 f_1(x) $$
+($\lambda_1$ can be complex)\\
+(The effect of $\hat{A}$ on an \textbf{eigenfunction} $f_1(x)$ of $\hat{A}$ is just to scale by the \textbf{eigenvalue} $\lambda_1$) \\
+
+\subsection{The path to Schrodinger's equation}
+Going to deal with Schrodinger's for a particle subject to forces.\\
+
+\subsubsection{Observables and linear operators}
+Going back to de Broglie wave functions $\Psi(x,t) = Ae^{i(kx-\omega t)}$\\
+We see that this is both an eigenfunction of the operator $\partial / \partial x$ and of $\partial^2 / \partial x^2$:
+$$ \frac{\partial}
+        {\partial x} \Psi(x,t) = ik \Psi(x,t) $$
+$$ \frac{\partial^2}
+        {\partial x^2} \Psi(x,t) = -k^2 \Psi(x,t) $$
+Multiplying both sides by some things, we get something interesting...
+$$ -i\hbar \frac{\partial}
+                {\partial x} \Psi(x,t) = \hbar k \Psi(x,t) $$
+$$ -\frac{-\hbar^2}
+         {2m}      \frac{\partial^2}
+                        {\partial x^2} \Psi(x,t) = \frac{(\hbar k)^2}
+                                                        {2m} \Psi(x,t) $$
+Using the de Broglie relation $p=\hbar k$ and $E=p^2/2m$, we see that we have eignevalues equal to momentum and energy.\\
+\textbf{Momentum} Operator: $-\frac{\hbar^2}
+                                   {2m}      \frac{\partial^2}
+                                                  {\partial x^2}$, Eigenvalue: $\hbar k$ (momentum)\\
+\textbf{Energy} Operator: $ -\frac{-\hbar^2}
+                                  {2m}      \frac{\partial^2}
+                                                 {\partial x^2}$, Eignevalue: $\frac{(\hbar k)^2}
+                                                                                    {2m}$ (energy) \\
+So our de Broglie wave is an eigenfunction of \emph{both} of the above operators, with the eigenvalues equal to (respectively) the momentum and the energy.\\
+\textbf{This is in fact a general rule:} Each observable $O$ is associated with a linear operator $\hat{O}$, and the eigenvalues of the operator are the only possible outcomes of a measurement of the observable $O$.\\
+We denote a transition from a classical variable to a quantum-mechanical operator using the symbol $\implies$. So we have
+$$ p_x \implies \hat{p_x} = -i\hbar\frac{\partial}{\partial x} $$
+$$ E_{kin} \implies \hat{E_{kin}} = -\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2} $$
+Two other operators are important:\\
+The \textbf{position operator} $\hat{x}$ is simply an operator to multiply by $x$.\\
+Also, any function of the position co-ordinate is also an observable, leading to the \textbf{potential energy operator} which tells us to multiply by the potential energy function $V(x)$.
+
+\subsubsection{Guessing the form of Schrodinger's equation}
+For a free particle, we have so far:
+$$ i\hbar \frac{\partial\Psi(x,t)}
+               {\partial t}       = \hat{E_{kin}}\Psi(x,t) $$
+For a non-free particle, lets just guess by adding the potential energy operator we've just met:
+$$ i\hbar \frac{\partial\Psi(x,t)}
+               {\partial t}       = (\hat{E_{kin}} + \hat{V}(x))\Psi(x,t) $$
+This is indeed right, so we just expand the two operators:
+$$ i\hbar \frac{\partial\Psi(x,t)}
+               {\partial t}       = - \frac{\hbar^2}{2m} \frac{\partial^2\Psi(x,t)}{\partial x^2} + V(x)\Psi(x,t).$$
+This is \textbf{Schrodinger's equation} for a particle of mass $m$ moving in one dimension, with a potential energy function $V(x)$.
+
+\subsubsection{A systematic recipe for Schrodinger's equation}
+\subsection{Wave functions and their interpretation}
+\subsubsection{Born's rule and normalization}
+\subsubsection{Wave functions and states}
+\subsubsection{The superposition principle}
+\subsection{The time-independent Schrodinger equation}
+\subsubsection{The separation of variables}
+\subsubsection{An eigenvalue equation for energy}
+\subsubsection{Energy eigenvalues and eigenfunctions}
+\subsubsection{Stationary states and wave packets}
+\subsection{Schrodinger's equation, an overview}
+
 \end{document}
