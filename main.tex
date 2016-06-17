@@ -271,10 +271,63 @@ the terms \emph{is important}.\\
 If $\Psi_1, \Psi2$ are solutions of Schrodinger's equation, then so is $a\Psi_1 + b\Psi_2$, for any complex $a,b$.
 
 \subsection{The time-independent Schrodinger equation}
+This is about where the energy levels in systems come from, and how they can be calculated.\\
+State of a system described by a wave function, which must satisfy Schrodinger's equation for that system.\\
+
 \subsubsection{The separation of variables}
+Assume $\Psi$ can be written
+$$ \Psi(x,t) = \psi(x)T(t) $$
+This gives simplification, but at the expense of finding \emph{all} solutions.\\
+But it does enable us to find all energy levels.
+Insert into Schrodinger's:
+$$ i \hbar \frac{\partial}{\partial t}\psi(x)T(t) = \left[ -\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} + V(x)\right] \psi(x)T(t). $$
+Taking account of which partial derivatives affect which functions of $x$ and $t$, we have:
+$$ \psi(x)i\hbar \frac{\partial T(t)}{\partial t} = T(t)\left[ -\frac{\hbar^2}{2m} \frac{\partial^2\psi(x)}{\partial x^2} + V(x)\psi(x)\right]. $$
+To get one side only in terms of $x$, and the other $t$, we divide by $\psi(x)T(t)$.\\
+(Since $\psi(x)$ and $T(t)$ only depend on one variable, we can also replace the partial derivatives with derivatives).
+$$ \frac{1}{T(t)} i\hbar \frac{d T(t)}{dt} = \frac{1}{\psi(x)}\left[ - \frac{\hbar^2}{2m} \frac{d^2 \psi(x)}{dx^2} + V(x)\psi(x)\right]. $$
+Now, for the LHS (dependent on $t$) to always be equal to the RHS (dependent on $x$), they must be equal to a constant, call it $E$:
+$$ \frac{1}{T(t)} i\hbar \frac{d T(t)}{dt} = E = \frac{1}{\psi(x)}\left[ - \frac{\hbar^2}{2m} \frac{d^2 \psi(x)}{dx^2} + V(x)\psi(x)\right]. $$
+Giving two ordinary differential equations:
+$$ i \hbar \frac{dT(t)}{dt} = ET(t), $$
+$$ - \frac{\hbar^2}{2m} \frac{d^2\psi(x)}{dx^2} + V(x)\psi(x) = E\psi(x). $$
+$E$ is called the \textbf{separation constant}.
+The first has a simple solution which applies to \emph{all} systems regardless of the potential energy function $V(x)$:
+$$ T(t) = e^{-iEt/\hbar} $$
+The second is the \textbf{time-independent Schrodinger equation} (TISE) and is characteristic of the system under study with the particular $V(x)$.\\
+So for a particular $V(x)$, we'd look for a solution $\psi(x)$ to TISE with a particular value of E, then put it back together with the $T(t)$ solution above:
+$$ \Psi(x,t) = \psi(x)T(t) = \psi(x)e^{-iEt/\hbar} $$
+
 \subsubsection{An eigenvalue equation for energy}
+We write the above TISE in the form
+$$\left[ - \frac{\hbar^2}{2m} {\partial^2}{\partial x^2} + V(x) \right] \psi(x) = E\psi(x) $$
+Which lets us recognize the [square bracket] term as the Hamiltonian operator, and write it as an eigenvalue equation:
+$$ \hat{H}\psi(x) = E\psi(x). $$
+The TISE of a system is the energy eigenvalue equation of that system.\\
+In general the eigenvalues of a quantum-mechanical operator $\hat{O}$ are the possible measured values of the corresponding observable $O$. Hence, E is energy.\\
+The product wave function $\Psi(x,t) = \psi(x)e^{-iEt/\hbar}$, where $\psi(x)$ is an energy eigenfunction with eigenvalue $E$ describes a state of definite energy $E$. If the energy of this system is measured in this state, the value $E$ will certainly be obtained.
+
 \subsubsection{Energy eigenvalues and eigenfunctions}
+We often restrict the search for eigenfunctions to be "physically sensible".\\
+We insist that energy eigenfunctions $\psi(x)$ don't diverge as $x \rightarrow \pm\infty$
+In the next chapter, we will solve TISE for particular instances of $V(x)$.\\
+For now we'll note, for finite wells, that we end up with discreet values of $E$, each with its own $\psi(x)$ eignefunction.\\
+We label each with a \textbf{quantum number} n:
+$$ \left[ - \frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} + V(x)\right] \psi_n(x) = E_n\psi_n(x) $$
+
 \subsubsection{Stationary states and wave packets}
+We have
+$$\Psi_n(x,t) = \psi_n(x)e^{-iE_n t/\hbar}.$$
+Applying Born's rule to find a probability, we have
+$$ \textrm{probability} = \lvert \Psi_n(x,t) \rvert^2 \delta x = \Psi_n^*(x,t)\Psi_n(x,t) \delta x $$
+Because $E_n$ is real, \emph{i.e.} equal to it's conjugate, we have
+$$ \lvert \Psi_n(x,t) \rvert^2 \delta x = \psi^*_n(x)\psi_n(x) e^{iE_n t/\hbar} e^{-i E_n t /\hbar}\delta x $$
+The product of the exponentials is one, so
+$$ \lvert \Psi_n(x,t) \rvert^2 \delta x = \lvert \psi_n(x)\rvert^2\delta x $$
+As this probability doesn't vary with time, we call it a stationary state.\\
+Note that stationary states can be combined (added) to give non-stationary states though.\\
+
 \subsection{Schrodinger's equation, an overview}
+No notes to make
 
 \end{document}
